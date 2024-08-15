@@ -1,0 +1,60 @@
+site_name: Chilo
+site_url: https://chiloproject.io
+site_author: Paul Cruse III
+site_dir: ../docs
+nav:
+    - Home: index.md
+    - install.md
+    - quickstart.md
+    - configuration-details.md
+    - logger.md
+    - PyPi Registry: https://pypi.org/project/chilo_api/
+    - Github Repository: https://github.com/dual/chilo
+    - Issues: https://github.com/dual/chilo/issues
+theme:
+    name: material
+    logo: https://raw.githubusercontent.com/syngenta/acai-python-docs/main/logos/logo-icon-docs.png
+    palette:
+        - scheme: chilo
+    highlightjs: true
+    hljs_languages:
+        - python
+        - yml
+    shortcuts:
+        help: 191 # ?
+        next: 78 # n
+        previous: 80 # p
+        search: 83 # s
+    features:
+        - navigation.top
+        - navigation.instant
+        - navigation.indexes
+        - navigation.tracking
+        - content.code.annotate
+markdown_extensions:
+    - codehilite
+    - meta
+    - admonition
+    - pymdownx.details
+    - pymdownx.tabbed:
+          alternate_style: true
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+    - pymdownx.highlight:
+          linenums: true
+    - pymdownx.snippets:
+          base_path: "."
+          check_paths: true
+    - toc:
+          permalink: true
+          toc_depth: 4
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+plugins:
+    - search
+extra_css:
+    - extra.css
