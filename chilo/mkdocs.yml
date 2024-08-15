@@ -4,8 +4,7 @@ site_author: Paul Cruse III
 site_dir: ../docs
 nav:
     - Home: index.md
-    - install.md
-    - quickstart.md
+    - features.md
     - configuration-details.md
     - logger.md
     - PyPi Registry: https://pypi.org/project/chilo_api/
