@@ -6,7 +6,7 @@ commands:
             - run: pipenv install
     python-build:
         steps:
-            - run: cd acai_aws && pipenv run build
+            - run: cd chilo && pipenv run build
     git-setup:
         steps:
             - run: git config user.email "auto@circleci.com"
