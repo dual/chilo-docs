@@ -4,9 +4,16 @@ site_author: Paul Cruse III
 site_dir: ../docs
 nav:
     - Home: index.md
-    - features.md
-    - configuration-details.md
-    - logger.md
+    - Guides:
+          - Configuring the Router: guides/router.md
+          - Building an Endpoint: guides/endpoint.md
+          - Generating an OpenAPI: guides/openapi.md
+    - Reference:
+          - Router: reference/router.md
+          - Endpoint: reference/endpoint.md
+          - Request: reference/request.md
+          - Response: reference/response.md
+          - Logger: reference/logger.md
     - PyPi Registry: https://pypi.org/project/chilo_api/
     - Github Repository: https://github.com/dual/chilo
     - Issues: https://github.com/dual/chilo/issues
