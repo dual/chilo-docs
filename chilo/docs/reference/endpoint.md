@@ -2,86 +2,6 @@
 title: Endpoint Reference
 ---
 
-## Example Code
-
-```python
-# example for endpoint file: api/handler/grower.py
-from chilo_api import requirements
-from chilo_api import logger
-
-from api.logic.grower import Grower
-from api.logic.middlware import log_grower, filter_grower
-
-
-# example after function
-def filter_grower(request, response, requirements):
-    if 'GET' in response.raw['message']:
-      logger.log(log=response.raw)
-    
-@requirements(
-    required_query=['requester_id'],
-    available_query=['grower_id', 'grower_email'],
-    request_class=Grower,
-    after=filter_grower,
-    auth_required=True
-)
-def get(request, response):
-    response.body = {'message': 'GET called', 'request_query_params': request.query_params}
-    return response
-
-
-# example before function
-def log_grower(request, response, requirements):
-    logger.log(log=request.body['grower_id'])
-    
-@requirements(
-    required_body='v1-grower-post-request',
-    before=log_grower,
-    auth_required=True
-)
-def post(request, response):
-    response.body = {'message': 'POST called', 'request_body': request.body}
-    return response
-
-
-@requirements(
-    required_headers=['x-api-key', 'x-correlation-id']
-    required_route='grower/{grower_id}'
-    auth_required=True
-    required_body={
-        'type': 'object',
-        'required': ['grower_id'],
-        'additionalProperties': False,
-        'properties': {
-            'grower_id': {
-                'type': 'string'
-            },
-            'body': {
-                'type': 'object'
-            },
-            'dict': {
-                'type': 'boolean'
-            }
-        }
-    }
-)
-def patch(request, response):
-    response.body = {'message': 'PATCH called', 'request_body': request.body}
-    return response
-
-
-@requirements(timeout=20) # this will override timeout set in router.py
-def put(request, response):
-    response.body = {'message': 'PUT called'}
-    return response
-
-
-# requirements is not required
-def delete(request, response):
-    response.body = {'message': 'DELETE called'}
-    return response
-```
-
 ## Configuration Options
 
 | requirement                                                                                      | type  | description                                                           |
@@ -345,4 +265,84 @@ def post(grower, response):
 @requirements(deprecated=True)
 def post(grower, response):
     pass
+```
+
+## Example Code
+
+```python
+# example for endpoint file: api/handler/grower.py
+from chilo_api import requirements
+from chilo_api import logger
+
+from api.logic.grower import Grower
+from api.logic.middlware import log_grower, filter_grower
+
+
+# example after function
+def filter_grower(request, response, requirements):
+    if 'GET' in response.raw['message']:
+      logger.log(log=response.raw)
+    
+@requirements(
+    required_query=['requester_id'],
+    available_query=['grower_id', 'grower_email'],
+    request_class=Grower,
+    after=filter_grower,
+    auth_required=True
+)
+def get(request, response):
+    response.body = {'message': 'GET called', 'request_query_params': request.query_params}
+    return response
+
+
+# example before function
+def log_grower(request, response, requirements):
+    logger.log(log=request.body['grower_id'])
+    
+@requirements(
+    required_body='v1-grower-post-request',
+    before=log_grower,
+    auth_required=True
+)
+def post(request, response):
+    response.body = {'message': 'POST called', 'request_body': request.body}
+    return response
+
+
+@requirements(
+    required_headers=['x-api-key', 'x-correlation-id']
+    required_route='grower/{grower_id}'
+    auth_required=True
+    required_body={
+        'type': 'object',
+        'required': ['grower_id'],
+        'additionalProperties': False,
+        'properties': {
+            'grower_id': {
+                'type': 'string'
+            },
+            'body': {
+                'type': 'object'
+            },
+            'dict': {
+                'type': 'boolean'
+            }
+        }
+    }
+)
+def patch(request, response):
+    response.body = {'message': 'PATCH called', 'request_body': request.body}
+    return response
+
+
+@requirements(timeout=20) # this will override timeout set in router.py
+def put(request, response):
+    response.body = {'message': 'PUT called'}
+    return response
+
+
+# requirements is not required
+def delete(request, response):
+    response.body = {'message': 'DELETE called'}
+    return response
 ```

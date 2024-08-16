@@ -1,8 +1,6 @@
 ---
 title: Building an Endpoint
----
-
-# How to build endpoints
+--- 
 
 Each endpoint is meant to be treated as a separate module within the API.Every endpoint file should contain a function which matches an 
 [HTTP method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) in lower case. 
