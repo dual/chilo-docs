@@ -19,7 +19,7 @@ nav:
     - Issues: https://github.com/dual/chilo/issues
 theme:
     name: material
-    logo: https://raw.githubusercontent.com/syngenta/acai-python-docs/main/logos/logo-icon-docs.png
+    logo: https://raw.githubusercontent.com/dual/chilo-docs/main/img/logo-no-bg.png
     palette:
         - scheme: chilo
     highlightjs: true
