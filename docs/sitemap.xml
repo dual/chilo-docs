@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://chiloproject.io/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/guides/endpoint/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/guides/openapi/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/guides/router/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/reference/endpoint/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/reference/logger/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/reference/request/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/reference/response/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://chiloproject.io/reference/router/</loc>
-         <lastmod>2024-08-16</lastmod>
+         <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

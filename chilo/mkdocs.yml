@@ -14,8 +14,9 @@ nav:
           - Request: reference/request.md
           - Response: reference/response.md
           - Logger: reference/logger.md
-    - PyPi Registry: https://pypi.org/project/chilo_api/
-    - Github Repository: https://github.com/dual/chilo
+    - Examples: https://github.com/dual/chilo-docs/tree/main/examples
+    - PyPi: https://pypi.org/project/chilo_api/
+    - Github: https://github.com/dual/chilo
     - Issues: https://github.com/dual/chilo/issues
 theme:
     name: material
