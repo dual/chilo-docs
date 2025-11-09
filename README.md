@@ -6,6 +6,6 @@ Docs repo for the chilo-api project
 
 ```
 pipenv install
-cd acai_aws
+cd chilo
 pipenv run serve
 ```
